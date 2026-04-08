@@ -53,12 +53,15 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>🚀 Welcome to My Website</h1>
-        <p>This is my first static website deployed for free!</p>
+    <p id="date"></p>
 
-        <a href="#" class="btn">Learn More</a>
-    </div>
+<script>
+    const today = new Date();
+    const options = { day: '2-digit', month: 'long', year: 'numeric' };
+    const formattedDate = today.toLocaleDateString('en-IN', options);
+
+    document.getElementById("date").innerText = "Date: " + formattedDate;
+</script>
 
     <footer>
         © 2026 Your Name | Hosted for free
